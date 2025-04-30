@@ -1,0 +1,22 @@
+{
+	"name": "ls_sqlserv_source",
+	"properties": {
+		"parameters": {
+			"fqdn": {
+				"type": "string"
+			},
+			"databasename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "@{linkedService().fqdn}",
+			"database": "@{linkedService().databasename}",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SystemAssignedManagedIdentity"
+		}
+	}
+}
