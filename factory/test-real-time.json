@@ -1,0 +1,9 @@
+{
+	"name": "test-real-time",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fed2ba59-354a-4f9f-8377-6f42d19c6e30",
+		"tenantId": "aec4b8fd-17f7-41f7-b21a-f3d0ecc38ba9"
+	}
+}

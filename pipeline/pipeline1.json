@@ -1,0 +1,71 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "customers",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Azure Function1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "name",
+						"value": "customers"
+					}
+				],
+				"typeProperties": {
+					"notebookPath": "/Users/ahabmannan1234@gmail.com/customers",
+					"baseParameters": {
+						"name": "customers"
+					},
+					"libraries": [
+						{
+							"jar": ""
+						}
+					]
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Azure Function1",
+				"type": "AzureFunctionActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"functionName": "HttpExample",
+					"method": "GET"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureFunction2",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-04-23T23:21:44Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
