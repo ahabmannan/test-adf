@@ -3,10 +3,12 @@
 	"properties": {
 		"parameters": {
 			"fqdn": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "@dataset().fqdn"
 			},
 			"databasename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "@dataset().databasename"
 			}
 		},
 		"annotations": [],
