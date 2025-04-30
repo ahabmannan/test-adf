@@ -1,0 +1,10 @@
+{
+	"name": "adfs_landing_zone",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://akstoragedemo.dfs.core.windows.net/"
+		}
+	}
+}
