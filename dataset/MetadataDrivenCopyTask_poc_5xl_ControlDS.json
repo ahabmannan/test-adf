@@ -1,0 +1,19 @@
+{
+	"name": "MetadataDrivenCopyTask_poc_5xl_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "newlinkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MetadataDrivenCopyTask_poc_5xl_20250505"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ControlTable"
+		}
+	}
+}
