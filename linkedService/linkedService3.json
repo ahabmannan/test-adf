@@ -1,0 +1,14 @@
+{
+	"name": "linkedService3",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "test-new-customers.database.windows.net",
+			"database": "Test_2025-05-05T04-31Z",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SystemAssignedManagedIdentity"
+		}
+	}
+}
