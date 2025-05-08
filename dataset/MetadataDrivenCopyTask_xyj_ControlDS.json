@@ -1,0 +1,19 @@
+{
+	"name": "MetadataDrivenCopyTask_xyj_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedService5",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MetadataDrivenCopyTask_xyj_20250508"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "MainControlTable_xyj"
+		}
+	}
+}
