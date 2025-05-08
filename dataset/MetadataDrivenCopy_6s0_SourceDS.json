@@ -1,0 +1,64 @@
+{
+	"name": "MetadataDrivenCopy_6s0_SourceDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HttpServer1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"cw_columnDelimiter": {
+				"type": "String"
+			},
+			"cw_rowDelimiter": {
+				"type": "String"
+			},
+			"cw_escapeChar": {
+				"type": "String"
+			},
+			"cw_quoteChar": {
+				"type": "Object"
+			},
+			"cw_firstRowAsHeader": {
+				"type": "Bool"
+			},
+			"cw_relativeUrl": {
+				"type": "String"
+			}
+		},
+		"folder": {
+			"name": "MetadataDrivenCopy_6s0_20250508"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().cw_relativeUrl",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": {
+				"value": "@dataset().cw_columnDelimiter",
+				"type": "Expression"
+			},
+			"rowDelimiter": {
+				"value": "@dataset().cw_rowDelimiter",
+				"type": "Expression"
+			},
+			"escapeChar": {
+				"value": "@dataset().cw_escapeChar",
+				"type": "Expression"
+			},
+			"firstRowAsHeader": {
+				"value": "@dataset().cw_firstRowAsHeader",
+				"type": "Expression"
+			},
+			"quoteChar": {
+				"value": "@dataset().cw_quoteChar",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	}
+}
