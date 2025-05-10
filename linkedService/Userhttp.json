@@ -1,0 +1,26 @@
+{
+	"name": "Userhttp",
+	"properties": {
+		"parameters": {
+			"url": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"url": "@{linkedService().url}",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous",
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "users"
+			}
+		},
+		"linkedServiceName": {
+			"referenceName": "MockAPIService",
+			"type": "LinkedServiceReference"
+		},
+		"schema": {}
+	}
+}
