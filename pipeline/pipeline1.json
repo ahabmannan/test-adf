@@ -50,7 +50,21 @@
 										"fileExtension": ".xml"
 									}
 								},
-								"enableStaging": false
+								"enableStaging": false,
+								"logSettings": {
+									"enableCopyActivityLog": true,
+									"copyActivityLogSettings": {
+										"logLevel": "Warning",
+										"enableReliableLogging": false
+									},
+									"logLocationSettings": {
+										"linkedServiceName": {
+											"referenceName": "AzureBlobStorage1",
+											"type": "LinkedServiceReference"
+										},
+										"path": "retain"
+									}
+								}
 							},
 							"inputs": [
 								{
